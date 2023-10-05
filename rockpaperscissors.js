@@ -35,15 +35,15 @@ function playRound(playerSelection, computerSelection){
         case "rock":
             switch (computerSelection){
                 case "rock":
-                    console.log("You Tie!");
+                    console.log(document.getElementById("tie"));
                     return 0;
                     
                 case "paper":
-                    console.log("You lose!");
+                    console.log(document.getElementById("lose"));
                     return -1;
                     
                 case "scissors":
-                    console.log("You win!");
+                    console.log(document.getElementById("win"));
                     return 1;
                     
                 default:
@@ -54,15 +54,15 @@ function playRound(playerSelection, computerSelection){
         case "paper":
             switch (computerSelection){
                 case "rock":
-                    console.log("You win!");
+                    console.log(document.getElementById("win"));
                     return 1;
                     
                 case "paper":
-                    console.log("You Tie!");
+                    console.log(document.getElementById("tie"));
                     return 0;
                     
                 case "scissors":
-                    console.log("You lose!");
+                    console.log(document.getElementById("lose"));
                     return -1;
                     
                 default:
@@ -73,15 +73,15 @@ function playRound(playerSelection, computerSelection){
         case "scissors":
             switch (computerSelection){
                 case "rock":
-                    console.log("You lose!");
+                    console.log(document.getElementById("lose"));
                     return -1;
                     
                 case "paper":
-                    console.log("You win!");
+                    console.log(document.getElementById("win"));
                     return 1;
                     
                 case "scissors":
-                    console.log("You Tie!");
+                    console.log(document.getElementById("tie"));
                     return 0;
                     
                 default:
@@ -95,22 +95,6 @@ function playRound(playerSelection, computerSelection){
       }
 }
 
-function game(){
-    let i = 0;
-    let wins = 0;
-    while (i < 5) {
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-        wins += playRound(playerSelection, computerSelection);
-        i++;
-    }
 
-    if (wins >=3){
-        console.log("You beat the computer!");
-    }
-    else{
-        console.log("You lost to the computer!");
-    }
-}
 
-game();
+playRound(getPlayerChoice(), getComputerChoice());
