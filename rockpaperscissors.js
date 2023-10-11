@@ -31,22 +31,24 @@ function getComputerChoice(){
 }
 
 function playRound(playerSelection, computerSelection){
+    const container = document.querySelector('#container');
     switch (playerSelection.toLowerCase()) {
         case "rock":
             switch (computerSelection){
                 case "rock":
-                    console.log(document.getElementById("tie"));
+                    container.textContent = 'Tie!';
                     return 0;
                     
                 case "paper":
-                    console.log(document.getElementById("lose"));
+                    container.textContent = 'You Lose!';
                     return -1;
                     
                 case "scissors":
-                    console.log(document.getElementById("win"));
+                    container.textContent = 'Win!';
                     return 1;
                     
                 default:
+                    container.textContent = 'Something went wrong!';
                     return "Something went wrong!";
                     
             }
@@ -54,18 +56,19 @@ function playRound(playerSelection, computerSelection){
         case "paper":
             switch (computerSelection){
                 case "rock":
-                    console.log(document.getElementById("win"));
+                    container.textContent = 'Win!';
                     return 1;
                     
                 case "paper":
-                    console.log(document.getElementById("tie"));
+                    container.textContent = 'Tie!';
                     return 0;
                     
                 case "scissors":
-                    console.log(document.getElementById("lose"));
+                    container.textContent = 'Lose!';
                     return -1;
                     
                 default:
+                    container.textContent = 'Something went wrong!';
                     return "Something went wrong!";
                     
             }
@@ -73,15 +76,15 @@ function playRound(playerSelection, computerSelection){
         case "scissors":
             switch (computerSelection){
                 case "rock":
-                    console.log(document.getElementById("lose"));
+                    container.textContent = 'Lose!';
                     return -1;
                     
                 case "paper":
-                    console.log(document.getElementById("win"));
+                    container.textContent = 'Win!';
                     return 1;
                     
                 case "scissors":
-                    console.log(document.getElementById("tie"));
+                    container.textContent = 'Tie!';
                     return 0;
                     
                 default:
@@ -94,7 +97,3 @@ function playRound(playerSelection, computerSelection){
             
       }
 }
-
-
-
-playRound(getPlayerChoice(), getComputerChoice());

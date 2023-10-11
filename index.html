@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <title>Roshambo Game</title>
-    <script src="rockpaperscissors.js"></script>
+    <script src="rockpaperscissors.js" defer></script>
   </head>
 
   <body>
     <h1>Play me at Roshambo!</h1>
-    <button class="button button1">Rock</button>
-    <button class="button button2">Paper</button>
-    <button class="button button3">Scissors</button>
-    <div class="display result">Display result here!</div>
+    <button onclick="playRound(getPlayerChoice(), getComputerChoice())">Rock</button>
+    <button onclick="playRound(getPlayerChoice(), getComputerChoice())">Paper</button>
+    <button onclick="playRound(getPlayerChoice(), getComputerChoice())">Scissors</button>
+    
+
+    <div id="container">
+      <div class="display">Display Result Here!</div>
+      <div class="controls"></div>
+    </div>
+
 
   </body>
 </html>
