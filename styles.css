@@ -1,24 +1,12 @@
-* {
-    color: purple;
-  }
+body{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+}
 
-  h1{
-    color: aqua;
-  }
-
-  #rockButton{
-    color: black;
-
-  }
-
-  #paperButton{
-    color: black;
-  }
-
-  #scissorsButton{
-    color: black;
-  }
-
-  .display{
-    color: black;
+  .buttonContainer{
+    flex: 1;
+    display: flex;
+    align-content: space-around;
   }

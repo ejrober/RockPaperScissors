@@ -40,15 +40,15 @@ function playRound(playerSelection, computerSelection){
         case "rock":
             switch (computerSelection){
                 case "rock":
-                    container.textContent = 'Tie! Player Score ' + playerScore + ', Computer Score ' + computerScore;
+                    container.textContent = 'Tie! Player Score \n' + playerScore + ', Computer Score ' + computerScore;
                     return 0;
                     
                 case "paper":
-                    container.textContent = 'You Lose! Player Score ' + playerScore + ', Computer Score ' + (computerScore += 1);
+                    container.textContent = 'You Lose! Player Score \n' + playerScore + ', Computer Score ' + (computerScore += 1);
                     return -1;
                     
                 case "scissors":
-                    container.textContent = 'You Win! Player Score ' + (playerScore += 1) + ' Computer Score ' + computerScore;
+                    container.textContent = 'You Win! Player Score \n' + (playerScore += 1) + ' Computer Score ' + computerScore;
                     return 1;
                     
                 default:
@@ -60,15 +60,15 @@ function playRound(playerSelection, computerSelection){
         case "paper":
             switch (computerSelection){
                 case "rock":
-                    container.textContent = 'You Win! Player Score ' + (playerScore += 1) + ', Computer Score ' + computerScore;
+                    container.textContent = 'You Win! Player Score \n' + (playerScore += 1) + ', Computer Score ' + computerScore;
                     return 1;
                     
                 case "paper":
-                    container.textContent = 'Tie! Player Score ' + playerScore + ', Computer Score ' + computerScore;
+                    container.textContent = 'Tie! Player Score \n' + playerScore + ', Computer Score ' + computerScore;
                     return 0;
                     
                 case "scissors":
-                    container.textContent = 'You Lose! Player Score ' + playerScore + ', Computer Score ' + (computerScore += 1);
+                    container.textContent = 'You Lose! Player Score \n' + playerScore + ', Computer Score ' + (computerScore += 1);
                     return -1;
                     
                 default:
@@ -80,15 +80,15 @@ function playRound(playerSelection, computerSelection){
         case "scissors":
             switch (computerSelection){
                 case "rock":
-                    container.textContent = 'You Lose! Player Score ' + playerScore + ', Computer Score ' + (computerScore += 1);
+                    container.textContent = 'You Lose! Player Score \n' + playerScore + ', Computer Score ' + (computerScore += 1);
                     return -1;
                     
                 case "paper":
-                    container.textContent = 'You Win! Player Score ' + (playerScore += 1) + ', Computer Score ' + computerScore;
+                    container.textContent = 'You Win! Player Score \n' + (playerScore += 1) + ', Computer Score ' + computerScore;
                     return 1;
                     
                 case "scissors":
-                    container.textContent = 'Tie! Player Score ' + playerScore + ', Computer score ' + computerScore;
+                    container.textContent = 'Tie! Player Score \n' + playerScore + ', Computer score ' + computerScore;
                     return 0;
                     
                 default:
