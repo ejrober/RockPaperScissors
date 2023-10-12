@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 console.log("Hello, let's play Rock Paper Scissors!");
 
 
@@ -37,15 +40,15 @@ function playRound(playerSelection, computerSelection){
         case "rock":
             switch (computerSelection){
                 case "rock":
-                    container.textContent = 'Tie!';
+                    container.textContent = 'Tie! Player Score ' + playerScore + ', Computer Score ' + computerScore;
                     return 0;
                     
                 case "paper":
-                    container.textContent = 'You Lose!';
+                    container.textContent = 'You Lose! Player Score ' + playerScore + ', Computer Score ' + (computerScore += 1);
                     return -1;
                     
                 case "scissors":
-                    container.textContent = 'Win!';
+                    container.textContent = 'You Win! Player Score ' + (playerScore += 1) + ' Computer Score ' + computerScore;
                     return 1;
                     
                 default:
@@ -57,15 +60,15 @@ function playRound(playerSelection, computerSelection){
         case "paper":
             switch (computerSelection){
                 case "rock":
-                    container.textContent = 'Win!';
+                    container.textContent = 'You Win! Player Score ' + (playerScore += 1) + ', Computer Score ' + computerScore;
                     return 1;
                     
                 case "paper":
-                    container.textContent = 'Tie!';
+                    container.textContent = 'Tie! Player Score ' + playerScore + ', Computer Score ' + computerScore;
                     return 0;
                     
                 case "scissors":
-                    container.textContent = 'Lose!';
+                    container.textContent = 'You Lose! Player Score ' + playerScore + ', Computer Score ' + (computerScore += 1);
                     return -1;
                     
                 default:
@@ -77,15 +80,15 @@ function playRound(playerSelection, computerSelection){
         case "scissors":
             switch (computerSelection){
                 case "rock":
-                    container.textContent = 'Lose!';
+                    container.textContent = 'You Lose! Player Score ' + playerScore + ', Computer Score ' + (computerScore += 1);
                     return -1;
                     
                 case "paper":
-                    container.textContent = 'Win!';
+                    container.textContent = 'You Win! Player Score ' + (playerScore += 1) + ', Computer Score ' + computerScore;
                     return 1;
                     
                 case "scissors":
-                    container.textContent = 'Tie!';
+                    container.textContent = 'Tie! Player Score ' + playerScore + ', Computer score ' + computerScore;
                     return 0;
                     
                 default:
@@ -99,8 +102,22 @@ function playRound(playerSelection, computerSelection){
       }
 }
 
-    // the JavaScript file
-    const btn = document.querySelector('#btn');
-    btn.addEventListener('click', () => {
-        playRound(getPlayerChoice(), getComputerChoice());
+    // the rockButton functionality
+    const rockButton = document.querySelector('#rockButton'); //Select the rockButton
+    rockButton.addEventListener('click', () => { //Add event listener to the rockButton with anonymous function to play round with user choice rock.
+        playRound("rock", getComputerChoice());
     });
+
+    // the paperButton functionality
+    const paperButton = document.querySelector('#paperButton'); //Select the paperButton
+    paperButton.addEventListener('click', () => { //Add event listener to the paperButton with anonymous function to play round with user choice rock.
+        playRound("paper", getComputerChoice());
+    });
+
+    // the scissorsButton functionality
+    const scissorsButton = document.querySelector('#scissorsButton'); //Select the scissorsButton
+    scissorsButton.addEventListener('click', () => { //Add event listener to the scissorsButton with anonymous function to play round with user choice rock.
+        playRound("scissors", getComputerChoice());
+    });
+
+  
