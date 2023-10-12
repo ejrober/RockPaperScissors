@@ -1,0 +1,24 @@
+* {
+    color: purple;
+  }
+
+  h1{
+    color: aqua;
+  }
+
+  #rockButton{
+    color: black;
+
+  }
+
+  #paperButton{
+    color: black;
+  }
+
+  #scissorsButton{
+    color: black;
+  }
+
+  .display{
+    color: black;
+  }
