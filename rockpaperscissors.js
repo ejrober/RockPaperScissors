@@ -32,6 +32,7 @@ function getComputerChoice(){
 
 function playRound(playerSelection, computerSelection){
     const container = document.querySelector('#container');
+
     switch (playerSelection.toLowerCase()) {
         case "rock":
             switch (computerSelection){
@@ -97,3 +98,9 @@ function playRound(playerSelection, computerSelection){
             
       }
 }
+
+    // the JavaScript file
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', () => {
+        playRound(getPlayerChoice(), getComputerChoice());
+    });
