@@ -1,17 +1,5 @@
 console.log("Hello, let's play Rock Paper Scissors!");
 
-function chooseRock(){
-    return "rock";
-}
-
-function choosePaper(){
-    return "paper";
-}
-
-function chooseScissors(){
-    return "scissors";
-}
-
 
 function getPlayerChoice(){
     let input = prompt("Rock, paper, Scissors?");
@@ -42,21 +30,21 @@ function getComputerChoice(){
       }
 }
 
-const myfuncton = function playRound(playerSelection, computerSelection){
+function playRound(playerSelection, computerSelection){
     const container = document.querySelector('#container');
     switch (playerSelection.toLowerCase()) {
         case "rock":
             switch (computerSelection){
                 case "rock":
-                    container.textContent = 'Rock vs Rock, Tie!';
+                    container.textContent = 'Tie!';
                     return 0;
                     
                 case "paper":
-                    container.textContent = 'Rock vs Paper, You Lose!';
+                    container.textContent = 'You Lose!';
                     return -1;
                     
                 case "scissors":
-                    container.textContent = 'Rock vs Scissors, Win!';
+                    container.textContent = 'Win!';
                     return 1;
                     
                 default:
@@ -68,15 +56,15 @@ const myfuncton = function playRound(playerSelection, computerSelection){
         case "paper":
             switch (computerSelection){
                 case "rock":
-                    container.textContent = 'Paper vs Rock, Win!';
+                    container.textContent = 'Win!';
                     return 1;
                     
                 case "paper":
-                    container.textContent = 'Paper vs Paper, Tie!';
+                    container.textContent = 'Tie!';
                     return 0;
                     
                 case "scissors":
-                    container.textContent = 'Paper vs Scissors, Lose!';
+                    container.textContent = 'Lose!';
                     return -1;
                     
                 default:
@@ -88,15 +76,15 @@ const myfuncton = function playRound(playerSelection, computerSelection){
         case "scissors":
             switch (computerSelection){
                 case "rock":
-                    container.textContent = 'Scissors vs Rock, Lose!';
+                    container.textContent = 'Lose!';
                     return -1;
                     
                 case "paper":
-                    container.textContent = 'Scissors vs Paper, Win!';
+                    container.textContent = 'Win!';
                     return 1;
                     
                 case "scissors":
-                    container.textContent = 'Scissors vs Scissors, Tie!';
+                    container.textContent = 'Tie!';
                     return 0;
                     
                 default:
@@ -109,8 +97,3 @@ const myfuncton = function playRound(playerSelection, computerSelection){
             
       }
 }
-
-
-const myObject = myfuncton.bind(this);
-
-document.getElementById("myBtn").addEventListener("click", myObject);
